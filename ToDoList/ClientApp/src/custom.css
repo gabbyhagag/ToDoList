@@ -1,0 +1,21 @@
+/* Provide sufficient contrast against white background */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 18px;
+}
+
+a {
+    color: #0366d6;
+}
+
+code {
+    color: #e01a76;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
