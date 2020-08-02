@@ -13,7 +13,7 @@ export default class App extends Component {
         return (
             <React.Fragment>
                 <Route exact path='/' component={Home} />
-                <Route path='/not-found' component={NotFound} />
+                <Route path='*' component={NotFound} />
             </React.Fragment>
         );
     }

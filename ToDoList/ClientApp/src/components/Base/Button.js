@@ -1,5 +1,5 @@
-import { lighten } from 'polished';
 import styled, { css } from 'styled-components';
+import { lighten } from 'polished';
 import styledProps from 'styled-props';
 
 export const Button = styled.button`

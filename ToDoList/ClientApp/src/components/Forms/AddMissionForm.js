@@ -32,6 +32,7 @@ export class AddMissionForm extends Component {
         oData.append('title', this.state.title);
         oData.append('imageFile', this.state.selectedFile, this.state.selectedFile.name);
         this.props.onSubmitHandler(oData);
+        event.target.reset();
     };
 
     handleMouseEnter = () => {
@@ -39,6 +40,8 @@ export class AddMissionForm extends Component {
     };
 
     render() {
+        const { title, selectedFile } = this.state;
+        const { isLoading } = this.props;
         return (
             <form onSubmit={this.handleSubmitForm}>
                 <StyledCol>
@@ -46,14 +49,21 @@ export class AddMissionForm extends Component {
                         ref={this.inputRef}
                         type='text'
                         name='title'
+                        valus={title}
                         onChange={this.onChangeTitleHandler}
                         onMouseEnter={this.handleMouseEnter}
                         placeholder='Type title'
                         required
                     />
-                    <StyledInput type='file' name='file' onChange={this.onChangeFileHandler} required />
-                    <Button primary type='submit' disabled={this.props.isLoading}>
-                        {this.props.isLoading ? 'Loading...' : 'Add'}
+                    <StyledInput
+                        type='file'
+                        name='file'
+                        valus={selectedFile}
+                        onChange={this.onChangeFileHandler}
+                        required
+                    />
+                    <Button primary type='submit' disabled={isLoading || !title || !selectedFile}>
+                        {isLoading ? 'Loading...' : 'Add'}
                     </Button>
                 </StyledCol>
             </form>

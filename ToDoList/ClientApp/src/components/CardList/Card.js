@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 import Spinner from '../Base/Spinner';
 
-export const Card = (props) => (
+export const Card = ({ loadingCard, mission }) => (
     <CardContainer>
-        {props.loadingCard ? <Spinner /> : <StayledImg alt='mission' src={props.mission.imageUrl} />}
-        {props.loadingCard ? <StayledH3>Loading...</StayledH3> : <StayledH3>{props.mission.title}</StayledH3>}
+        {loadingCard ? <Spinner /> : <StayledImg alt='mission' src={mission.imageUrl} />}
+        {loadingCard ? <StayledH3>Loading...</StayledH3> : <StayledH3>{mission.title}</StayledH3>}
     </CardContainer>
 );
 
-const CardContainer = styled.div`
+const CardContainer = styled.li`
     flex-grow: 1;
     display: flex;
     flex-direction: column;

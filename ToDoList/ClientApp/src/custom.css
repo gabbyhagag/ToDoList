@@ -4,6 +4,8 @@
 body {
     font-family: 'Tajawal', sans-serif;
     font-size: 18px;
+    background-color: aliceblue;
+    margin: 0;
 }
 
 a {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// create the base url for all requests mockApi
+// create the base path for all requests Api
 const api = axios.create({
     baseURL: 'api',
     timeout: 5000,
