@@ -1,4 +1,4 @@
-# ToDoList-Isracard
+# ToDoList
 
 ## Description
 I am using the Dotnet core 3.1 Web API (C# 8) with React SPA.
